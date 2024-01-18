@@ -1,5 +1,5 @@
 let randomNumber = parseInt(Math.random() * 100 + 1);
-console.log(randomNumber);
+//console.log(randomNumber);
 const submit = document.querySelector('#subt');
 const userInput = document.querySelector('#guessField');
 const guessSlot = document.querySelector('.guesses');
@@ -20,6 +20,7 @@ function newGame() {
   const newGameButton = document.querySelector('#newGame');
   newGameButton.addEventListener('click', function (e) {
     randomNumber = parseInt(Math.random() * 100 + 1);
+    //console.log(randomNumber);
     numGuess = 1;
     guessSlot.innerHTML = '';
     remaining.innerHTML = '10';
@@ -31,6 +32,7 @@ function newGame() {
   // Now: <div id="div1" width="200px">
     startOver.removeChild(p);
     playGame = true;
+
   });
 }
 
@@ -87,6 +89,7 @@ function validateGuess(guess) {
         if(checker)
         {
             endGame();
+            checker = false;
         }
         else{
             displayMessage(`Game Over. Random number was ${randomNumber}`);
