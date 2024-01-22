@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github User Information</title>
+    <link rel="shortcut icon" href="../js.png" type="image/x-icon">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #212121;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            margin: 0 5px;
+        }
+        form{
+            
+            display: flex;
+            gap: 30px;
+            color: green;
+            align-items: center;
+            justify-content: center;
+            margin: 30px 0;
+        }
+       
+        input[type=text]{
+            
+            text-align: center;
+            padding: 5px;
+            border: none;
+            font-size: 20px;
+            border-radius: 3px;
+            -webkit-transition: 0.1s;
+            transition: 0.1s;
+            outline: none;
+           
+        }
+        input[type=text]:focus {
+         border: 5px solid green;
+}
+        #subt{
+            background-color: green;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            padding: 8px;
+            cursor: pointer;
+            border: none;
+            border-radius: 3px;
+        }
+        #subt:hover{
+            background-color: royalblue;
+        }
+       
+table {
+  border-collapse: collapse;
+}
+table, td {
+  border: 2px solid white;
+}
+td{
+    padding: 5px;
+    text-align: center;
+}
+        
+    </style>
+</head>
+<body>
+    <h1>Github User Information</h1>
+    <form action="">
+        <label for="githubUser">User Name</label>
+        <input type="text" id="githubUser" name="githubUser" >
+        <input type="submit" value="Submit" id="subt">
+      </form> 
+<div style="display: flex; justify-content: center; align-items: center; font-size: 20px;">
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;  width: 300px; border: 3px solid white; padding: 20px; border-radius: 15px;">
+        <div style="width: 150px; height: 150px; border-radius: 50%; border: 3px solid green; display: flex; justify-content: center; align-items: center;" id="image"></div>
+        <div style="text-align: center; display: flex; justify-content: center; flex-direction: column; align-items: center;" ><p id="uname">User Name</p>
+            <table >
+                <tr>
+                    <td>Following</td>
+                    <td style="padding-left:30px;padding-right: 30px; box-sizing: border-box;" id="following"></td>
+                </tr>
+                <tr>
+                    <td>Followers</td>
+                    <td id="followers"></td>
+                </tr>
+            </table>
+            <a href="#" style="color: green; text-decoration: none; display: block; padding-top: 20px;" id="link" target="_blank">Click Here For More Details</a>
+        </div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
