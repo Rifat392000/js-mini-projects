@@ -31,7 +31,7 @@ function userInfo(requesturl){
         }
         else if(xhr.readyState=== 4 && this.status == 404 )
         {
-           alert("Page not found provide a valid user name");
+           alert(`${data.login} Page not found provide a valid user name`);
            githubUser.value='';
         }
     }
