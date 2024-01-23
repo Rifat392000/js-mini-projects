@@ -22,6 +22,14 @@ function userInfo(requesturl){
             document.getElementById('link').href=`${data.html_url}`
             githubUser.value='';
         }
+        else if(xhr.readyState=== 4 && this.status == 403 )
+        {
+           alert("Forbidden")
+        }
+        else if(xhr.readyState=== 4 && this.status == 404 )
+        {
+           alert("Page not found provide a valid user name")
+        }
     }
 
     xhr.open('GET', requesturl);
@@ -38,6 +46,6 @@ userInfo(requesturl);
 }
 else
 {
-alert("Please! Provide a valid user name!!");
+alert("Please! Provide a user name!!");
 }
 })
