@@ -27,6 +27,13 @@ function userInfo(requesturl){
 
 submit.addEventListener('click', e => {
 e.preventDefault();
-let requesturl= `https://api.github.com/users/${githubUser.value}`;
+if(githubUser.value != '')
+{
+const requesturl= `https://api.github.com/users/${githubUser.value}`;
 userInfo(requesturl);
+}
+else
+{
+alert("Please! Provide a valid user name!!");
+}
 })
