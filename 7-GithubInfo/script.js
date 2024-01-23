@@ -19,6 +19,7 @@ function userInfo(requesturl){
             document.getElementById('uname').innerHTML=`${data.login}`;
             document.getElementById('following').innerHTML=`${data.following}`;
             document.getElementById('followers').innerHTML=`${data.followers}`;
+            document.getElementById('repo').innerHTML=`${data.public_repos}`;
             document.getElementById('link').href=`${data.html_url}`
             githubUser.value='';
         }
