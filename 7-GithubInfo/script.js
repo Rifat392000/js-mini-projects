@@ -24,11 +24,15 @@ function userInfo(requesturl){
         }
         else if(xhr.readyState=== 4 && this.status == 403 )
         {
-           alert("Forbidden")
+            
+           alert("Forbidden");
+           githubUser.value='';
+
         }
         else if(xhr.readyState=== 4 && this.status == 404 )
         {
-           alert("Page not found provide a valid user name")
+           alert("Page not found provide a valid user name");
+           githubUser.value='';
         }
     }
 
