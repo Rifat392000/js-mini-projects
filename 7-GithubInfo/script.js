@@ -8,10 +8,12 @@ console.log(submit);
 function userInfo(requesturl){
     console.log(requesturl);
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', requesturl);
+
+    // https://www.w3schools.com/xml/ajax_xmlhttprequest_response.asp
+
     xhr.onreadystatechange = function () {
-        
-        if (xhr.readyState === 4) {
+        if (xhr.readyState === 4 && this.status == 200) {
+            console.log(this.responseText);
             const data = JSON.parse(this.responseText);
             document.getElementById('image').innerHTML=`<img src="${data.avatar_url}" alt="Boy in a tshirt" width="140px" height="140px" style="border-radius: 50%; object-fit:contain;">`;
             document.getElementById('uname').innerHTML=`${data.login}`;
@@ -21,6 +23,8 @@ function userInfo(requesturl){
             githubUser.value='';
         }
     }
+
+    xhr.open('GET', requesturl);
       xhr.send();
 }
 
