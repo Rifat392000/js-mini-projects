@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Baper Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="mt-14 mx-64" style="background-color: #212121">
+    <h1 class="text-5xl font-semibold text-center mb-10 text-white">
+      Welcome to my <span class="text-violet-400">Baap-Er-Bank</span>
+    </h1>
+    <div class="bg-yellow-100 px-10 py-10 rounded-md">
+      <input
+        type="email"
+        placeholder="Email"
+        class="mb-4 w-64 h-10 pl-2 rounded-md border-2 border-black font-medium"
+        id="email-address"
+      />
+      <input
+        type="Password"
+        name=""
+        class="block mb-4 w-64 h-10 pl-2 rounded-md border-2 border-black font-medium"
+        placeholder="Password"
+        id="password-password"
+      />
+      <button
+        class="bg-orange-400 w-14 h-8 ml-4 text-lg rounded-sm text-center text-white font-semibold hover:bg-blue-500"
+        id="login-btn"
+      >
+        Login
+      </button>
+    </div>
+    <script>
+      document.getElementById("login-btn").addEventListener("click", e => {
+    const email = document.getElementById("email-address").value;
+    const password = document.getElementById("password-password").value;
+
+    if (email !== '' && password !== '') {
+        if (email === "rifat@gmail.com" && password === "A123") {
+            window.location.href = "bank.html";
+        } else {
+            alert("Login Failed");
+        }
+    } else {
+        alert("Must provide the email and password");
+    }
+});
+    </script>
+  </body>
+</html>
