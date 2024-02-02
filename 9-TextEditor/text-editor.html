@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rifat Text Editor</title>
+    <link rel="shortcut icon" href="editor.svg" type="image/x-icon" />
+    <style>
+      h1 {
+        font-family: "Lucida Console", "Courier New", monospace;
+      }
+      textarea {
+        border: 2px solid #212121;
+        -webkit-transition: 0.1s;
+        transition: 0.1s;
+        outline: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body style="background-color: #212121">
+    <main>
+      <section>
+        <div
+          class="flex items-center flex-col bg-blue-300 mt-10 mx-36 rounded-sm"
+        >
+          <h1 class="text-xl mt-1 mb-4 font-semibold">Text Editor</h1>
+          <div class="flex gap-36 pb-3 justify-center items-center">
+            <div class="flex gap-3">
+              <img src="bold-solid.svg" alt="" class="w-3" id="bold" />
+              <img src="italic-solid.svg" alt="" class="w-3" id="italic" />
+              <img
+                src="underline-solid.svg"
+                alt=""
+                class="w-3"
+                id="underline"
+              />
+            </div>
+            <div class="flex gap-3 justify-center items-center">
+              <img
+                src="align-left-solid.svg"
+                alt=""
+                class="w-3"
+                id="leftalign"
+              /><img
+                src="align-right-solid.svg"
+                alt=""
+                class="w-3"
+                id="rightalign"
+              /><img
+                src="align-center-solid.svg"
+                alt=""
+                class="w-3"
+                id="centeralign"
+              />
+              <img
+                src="align-justify-solid.svg"
+                alt=""
+                class="w-3"
+                id="equalalign"
+              />
+            </div>
+            <div class="flex gap-3 justify-center items-center">
+              <select name="size" id="size"></select>
+              <p class="text-xl font-semibold cursor-default" id="smCap">aA</p>
+              <input type="color" name="" id="color" class="w-8 h-4" />
+            </div>
+          </div>
+          <div class="h-[1px] bg-gray-700 w-11/12 mb-3"></div>
+          <textarea
+            name=""
+            id="text"
+            class="block w-11/12 mb-4 rounded-sm h-80 resize-none p-2"
+          ></textarea>
+        </div>
+      </section>
+    </main>
+    <script src="editor.js"></script>
+  </body>
+</html>

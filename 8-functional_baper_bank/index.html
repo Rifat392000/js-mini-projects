@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Baper Bank</title>
+    <link rel="shortcut icon" href="../js.png" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="mt-14 mx-64" style="background-color: #212121">
@@ -32,20 +33,20 @@
       </button>
     </div>
     <script>
-      document.getElementById("login-btn").addEventListener("click", e => {
-    const email = document.getElementById("email-address").value;
-    const password = document.getElementById("password-password").value;
+      document.getElementById("login-btn").addEventListener("click", (e) => {
+        const email = document.getElementById("email-address").value;
+        const password = document.getElementById("password-password").value;
 
-    if (email !== '' && password !== '') {
-        if (email === "rifat@gmail.com" && password === "A123") {
+        if (email !== "" && password !== "") {
+          if (email === "rifat@gmail.com" && password === "A123") {
             window.location.href = "bank.html";
-        } else {
+          } else {
             alert("Login Failed");
+          }
+        } else {
+          alert("Must provide the email and password");
         }
-    } else {
-        alert("Must provide the email and password");
-    }
-});
+      });
     </script>
   </body>
 </html>
